@@ -17,7 +17,8 @@ export class MoviesService {
     this.movies.filter((movie) => movie.id !== +id);
     return true;
   }
-
+//테스트용 주석
+  //테스트 release bug fix했다고 침
   create(movieData) {
     this.movies.push({
       id: this.movies.length + 1,
