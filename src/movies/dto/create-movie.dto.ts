@@ -6,7 +6,7 @@
  * 1. 프로그래머로서 코드를 더 간결하게 만들 수 있도록 해줌
  * 2. NestJS가 들어오는 쿼리에 대해 유효성 검사할 수 있게 해줌
  * */
-import { IsNumber, IsString } from 'class-validator';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class CreateMovieDto {
   @IsString()
@@ -15,6 +15,7 @@ export class CreateMovieDto {
   @IsNumber()
   readonly year: number;
 
+  @IsOptional()
   @IsString({ each: true })
   readonly genres: string[];
 }
