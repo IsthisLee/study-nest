@@ -31,7 +31,7 @@ export class MoviesController {
    * 따라서, 가능한 NestJS에서 처리하는 방법을 사용하여 처리하는 것이 좋다.
    * */
   @Get()
-  getAll(@Req() req, @Res() res): Movie[] {
+  getAll(): Movie[] {
     return this.movieService.getAll();
   }
 
